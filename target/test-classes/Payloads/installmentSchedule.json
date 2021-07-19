@@ -1,0 +1,44 @@
+{
+  "name": "var_name",
+  "descr": "descr",
+  "billPreference": "IMMEDIATE",
+  "createdAt": "2021-06-22T05:32:40.414Z",
+  "modifiedAt": "2021-06-28T05",
+  "code": "code1",
+  "status": "SKIPNODE",
+  "validFor": {
+    "startDateTime": "2021-06-22T05:32:40.414Z",
+    "endDateTime": "2021-06-28T05:32:40.414Z"
+  },
+  "totalInstallments": 2,
+  "totalAmount": {
+    "amount": 500,
+    "currency": "EUR"
+  },
+  "customerRef": "0.0.0.1+-account+533748+0",
+  "billProfileRef": "0.0.0.1+-billinfo+535284+0",
+  "bills": [
+    {
+      "billId": "SKIPNODE"
+    }
+  ],
+  "scheduleSpecRef": "0.0.0.1+-config-installment-schedule_spec+500010",
+  "installments": [
+    {
+      "status": "OPEN",
+      "dueDate": "2021-07-28T05:32:40.414Z",
+      "amount": {
+        "amount": "SKIPNODE",
+        "currency": "EUR"
+      }
+    },
+    {
+      "status": "OPEN",
+      "dueDate": "2021-08-28T05:32:40.414Z",
+      "amount": {
+        "amount": 250,
+        "currency": "EUR"
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+satellite URL :https://api.wheretheiss.at/v1/satellites
+Response: [{"name":"iss","id":25544}]
+io.restassured.internal.ValidatableResponseImpl@5bcb04cb
+stellite URL :https://api.wheretheiss.at/v1/satellite
+Response: {"error":"Invalid controller specified (satellite)","status":404}
+io.restassured.internal.ValidatableResponseImpl@66b59b7d
+stellite URL :https://api.wheretheiss.at/v1/satellite
+Response: {"error":"Invalid controller specified (satellite)","status":404}
+io.restassured.internal.ValidatableResponseImpl@2e869098
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+https://api.wheretheiss.at/v1/satellites/25544?units=miles&timestamp=234
+Response: {"name":"iss","id":25544,"latitude":-15.565052605388,"longitude":-171.83543892629,"altitude":125.06085948993,"velocity":17499.449168355,"visibility":"daylight","footprint":1965.6089562001,"timestamp":234.00001823902,"daynum":2440587.5027083,"solar_lat":-23.056846663402,"solar_lon":179.84174490955,"units":"miles"}
+io.restassured.internal.ValidatableResponseImpl@22ebccb9
+miles
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+https://api.wheretheiss.at/v1/satellites/25544?units=null&timestamp=1245
+Response: {"name":"iss","id":25544,"latitude":-51.700029576119,"longitude":-102.1887567926,"altitude":304.42322807305,"velocity":27754.424261058,"visibility":"daylight","footprint":3865.1904034588,"timestamp":1245.0000062585,"daynum":2440587.5144097,"solar_lat":-23.055936653223,"solar_lon":175.63063622197,"units":"kilometers"}
+io.restassured.internal.ValidatableResponseImpl@600f5704
+kilometers
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+units:
+units in query Parmsio.restassured.internal.RequestSpecificationImpl@7ad1caa2
+Response: {"error":"invalid timestamp","status":400}
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+https://api.wheretheiss.at/v1/satellites/25544?units=&timestamp=1245
+Response: {"name":"iss","id":25544,"latitude":-51.700029576119,"longitude":-102.1887567926,"altitude":304.42322807305,"velocity":27754.424261058,"visibility":"daylight","footprint":3865.1904034588,"timestamp":1245.0000062585,"daynum":2440587.5144097,"solar_lat":-23.055936653223,"solar_lon":175.63063622197,"units":"kilometers"}
+io.restassured.internal.ValidatableResponseImpl@6419a0e1
+kilometers
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+https://api.wheretheiss.at/v1/satellites/25544?units=miles&timestamp=1245
+Response: {"name":"iss","id":25544,"latitude":-51.700029576119,"longitude":-102.1887567926,"altitude":189.15976565098,"velocity":17245.794357518,"visibility":"daylight","footprint":2401.7172261876,"timestamp":1245.0000062585,"daynum":2440587.5144097,"solar_lat":-23.055936653223,"solar_lon":175.63063622197,"units":"miles"}
+io.restassured.internal.ValidatableResponseImpl@ea52184
+miles
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+Satellite URL:https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=21436029892,1436029902&units=miles
+Response: [{"name":"iss","id":25544,"latitude":5.0097736016149,"longitude":-26.999895458034,"altitude":30911899239.025,"velocity":6.3115117076515,"visibility":"daylight","footprint":12450.780238877,"timestamp":21436029892,"daynum":2688689.6978241,"solar_lat":9.0596085774637,"solar_lon":108.93264705867,"units":"miles"},{"name":"iss","id":25544,"latitude":-25.344256596171,"longitude":18.04663730318,"altitude":253.53270332355,"velocity":17148.247302231,"visibility":"daylight","footprint":2762.6234978127,"timestamp":1436029902,"daynum":2457208.2164583,"solar_lat":22.854640837166,"solar_lon":283.17877169756,"units":"miles"}]
+io.restassured.internal.ValidatableResponseImpl@57c00115
+2
+21436029892 ,Satelitte Id & units are validated
+1436029902 ,Satelitte Id & units are validated
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+Satellite URL:https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=none&units=miles
+Response: {"error":"invalid timestamp in list: none","status":400}
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+Satellite URL:https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=1436029902&units=null
+Response: [{"name":"iss","id":25544,"latitude":-25.344256596171,"longitude":18.04663730318,"altitude":408.02146112959,"velocity":27597.437444347,"visibility":"daylight","footprint":4446.0129259536,"timestamp":1436029902,"daynum":2457208.2164583,"solar_lat":22.854640837166,"solar_lon":283.17877169756,"units":"kilometers"}]
+io.restassured.internal.ValidatableResponseImpl@d535a3d
+1
+1436029902 ,Satelitte Id & units are validated
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+Satellite URL:https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=21433429892,1436169902&units=null
+Response: [{"name":"iss","id":25544,"latitude":31.276072920192,"longitude":-167.65931128738,"altitude":49192917593.746,"velocity":10.266783539617,"visibility":"daylight","footprint":20037.594653455,"timestamp":21433429892,"daynum":2688659.6052315,"solar_lat":-2.582672361024,"solar_lon":144.25672717733,"units":"kilometers"},{"name":"iss","id":25544,"latitude":-46.499352699866,"longitude":-112.87605053726,"altitude":418.51609520579,"velocity":27570.719906378,"visibility":"eclipsed","footprint":4499.9063012085,"timestamp":1436169902,"daynum":2457209.8368287,"solar_lat":22.702548672664,"solar_lon":59.915736258763,"units":"kilometers"}]
+io.restassured.internal.ValidatableResponseImpl@65fe2691
+2
+21433429892 ,Satelitte Id & units are validated
+1436169902 ,Satelitte Id & units are validated
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+Satellite URL:https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911&units=null
+Response: [{"name":"iss","id":25544,"latitude":-33.637735166841,"longitude":9.3049225189718,"altitude":49576858472.375,"velocity":10.187263501313,"visibility":"daylight","footprint":20037.594666263,"timestamp":21433429891,"daynum":2688659.6052199,"solar_lat":-2.5826769357219,"solar_lon":144.26089455362,"units":"kilometers"},{"name":"iss","id":25544,"latitude":31.276072920192,"longitude":-167.65931128738,"altitude":49192917593.746,"velocity":10.266783539617,"visibility":"daylight","footprint":20037.594653455,"timestamp":21433429892,"daynum":2688659.6052315,"solar_lat":-2.582672361024,"solar_lon":144.25672717733,"units":"kilometers"},{"name":"iss","id":25544,"latitude":-30.542379038586,"longitude":13.232083509474,"altitude":49556122724.803,"velocity":10.191542459933,"visibility":"daylight","footprint":20037.594665577,"timestamp":21433429893,"daynum":2688659.6052431,"solar_lat":-2.5826677863259,"solar_lon":144.25255980101,"units":"kilometers"},{"name":"iss","id":25544,"latitude":28.044707807546,"longitude":-163.87013702748,"altitude":49214553869.49,"velocity":10.262285846823,"visibility":"daylight","footprint":20037.594654182,"timestamp":21433429894,"daynum":2688659.6052546,"solar_lat":-2.5826632116282,"solar_lon":144.24839242469,"units":"kilometers"},{"name":"iss","id":25544,"latitude":-27.332999462589,"longitude":16.915212134269,"altitude":49534246973.1,"velocity":10.196058599966,"visibility":"daylight","footprint":20037.594664852,"timestamp":21433429895,"daynum":2688659.6052662,"solar_lat":-2.5826586369301,"solar_lon":144.24422504837,"units":"kilometers"},{"name":"iss","id":25544,"latitude":24.719380032388,"longitude":-160.31031623863,"altitude":49237227191.138,"velocity":10.257574703715,"visibility":"daylight","footprint":20037.594654943,"timestamp":21433429896,"daynum":2688659.6052778,"solar_lat":-2.5826540622323,"solar_lon":144.24005767208,"units":"kilometers"},{"name":"iss","id":25544,"latitude":-24.027824671926,"longitude":20.391980883336,"altitude":49511361376.901,"velocity":10.200785345633,"visibility":"daylight","footprint":20037.594664092,"timestamp":21433429897,"daynum":2688659.6052894,"solar_lat":-2.5826494875108,"solar_lon":144.23589029581,"units":"kilometers"},{"name":"iss","id":25544,"latitude":21.29994474408,"longitude":-156.9249468119,"altitude":49260919027.11,"velocity":10.252654253773,"visibility":"daylight","footprint":20037.594655738,"timestamp":21433429898,"daynum":2688659.6053009,"solar_lat":-2.5826449126261,"solar_lon":144.23172275185,"units":"kilometers"},{"name":"iss","id":25544,"latitude":-20.629271134879,"longitude":23.709490488265,"altitude":49487509961.806,"velocity":10.205713888858,"visibility":"daylight","footprint":20037.5946633,"timestamp":21433429899,"daynum":2688659.6053125,"solar_lat":-2.5826403379277,"solar_lon":144.22755537553,"units":"kilometers"},{"name":"iss","id":25544,"latitude":27.708643255247,"longitude":-160.10846609337,"altitude":49216960796.033,"velocity":10.261784023103,"visibility":"daylight","footprint":20037.594654263,"timestamp":21433429110,"daynum":2688659.5961806,"solar_lat":-2.5862497769576,"solar_lon":147.51563317924,"units":"kilometers"},{"name":"iss","id":25544,"latitude":0.62269163784056,"longitude":41.483024351988,"altitude":49335625645.021,"velocity":10.23715430199,"visibility":"daylight","footprint":20037.594658239,"timestamp":21433429911,"daynum":2688659.6054514,"solar_lat":-2.5825854413337,"solar_lon":144.17754669214,"units":"kilometers"}]
+io.restassured.internal.ValidatableResponseImpl@67536ae0
+11
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544/tles
+Response: {"requested_timestamp":1626699533,"tle_timestamp":1626656584,"id":"25544","name":"iss","header":"ISS (ZARYA)","line1":"1 25544U 98067A   21200.04379163  .00001691  00000-0  39053-4 0  9999","line2":"2 25544  51.6430 185.1881 0001777 168.5699 300.6219 15.48819808293534"}
+io.restassured.internal.ValidatableResponseImpl@6a1d526c
+X-Rate-Limit_remaining: 338
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544/tles
+Response: ISS (ZARYA)
+1 25544U 98067A   21200.04379163  .00001691  00000-0  39053-4 0  9999
+2 25544  51.6430 185.1881 0001777 168.5699 300.6219 15.48819808293534
+io.restassured.internal.ValidatableResponseImpl@3e05586b
+X-Rate-Limit_remaining: 337
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544/tles
+Response: {"requested_timestamp":1626699536,"tle_timestamp":1626656584,"id":"25544","name":"iss","header":"ISS (ZARYA)","line1":"1 25544U 98067A   21200.04379163  .00001691  00000-0  39053-4 0  9999","line2":"2 25544  51.6430 185.1881 0001777 168.5699 300.6219 15.48819808293534"}
+io.restassured.internal.ValidatableResponseImpl@733ec58b
+X-Rate-Limit_remaining: 336
+stellite URL :https://api.wheretheiss.at/v1/coordinates/20.593683,78.962883
+Response: {"latitude":"20.593683","longitude":"78.962883","timezone_id":"Asia\/Kolkata","offset":5.5,"country_code":"IN","map_url":"https:\/\/maps.google.com\/maps?q=20.593683,78.962883&z=4"}
+io.restassured.internal.ValidatableResponseImpl@2f80cb79
+stellite URL :https://api.wheretheiss.at/v1/coordinates/51.507351,-0.127758
+Response: {"latitude":"51.507351","longitude":"-0.127758","timezone_id":"Europe\/London","offset":1,"country_code":"GB","map_url":"https:\/\/maps.google.com\/maps?q=51.507351,-0.127758&z=4"}
+io.restassured.internal.ValidatableResponseImpl@67eec8e1
+stellite URL :https://api.wheretheiss.at/v1/coordinates/90.593683,78.962883
+Response: {"error":"application error","status":500}
+io.restassured.internal.ValidatableResponseImpl@1235151c
+stellite URL :https://api.wheretheiss.at/v1/coordinates/-91.507351,-0.127758
+Response: {"error":"application error","status":500}
+io.restassured.internal.ValidatableResponseImpl@6fa2448b
+stellite URL :https://api.wheretheiss.at/v1/coordinates/20.593683,181.962883
+Response: {"error":"application error","status":500}
+io.restassured.internal.ValidatableResponseImpl@6588b715
+stellite URL :https://api.wheretheiss.at/v1/coordinates/-21.507351,-180.127758
+Response: {"error":"application error","status":500}
+io.restassured.internal.ValidatableResponseImpl@5ae15

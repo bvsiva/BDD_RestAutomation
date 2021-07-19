@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: runnerClasses.RunnerTest
+-------------------------------------------------------------------------------
+Tests run: 23, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 35.325 s <<< FAILURE! - in runnerClasses.RunnerTest
+GET satellite info with/without optional parameters units, timestamp #3(TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone)  Time elapsed: 1.445 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+
+validate satellite list with specified coordinates #2(TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone)  Time elapsed: 1.369 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+
+validate satellite list with specified coordinates #5(TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone)  Time elapsed: 1.36 s  <<< FAILURE!
+java.lang.AssertionError: expected:<10> but was:<11>
+

@@ -1,0 +1,26 @@
+[{
+    "name": "var_name",
+    "chargeOfferRef": "Test",
+    "descr": "Desc",
+    "glid": "4",
+    "expiresAt": "2031-06-02T09:58:31.000Z",
+    "startsAt": "2032-06-02T09:58:31.000Z",
+    "minPercent": "",
+    "minAmount": var_minAmount,
+    "maxIntervalDaysNEI": "10",
+    "maxNumNEI": "20",
+    "qualifiers": [
+        {
+            "dataType": "INTEGER",
+            "key": "/account.PIN_FLD_AAC_SOURCE",
+            "operator": "GT",
+            "value": "22"
+        },
+        {
+            "dataType": "INTEGER",
+            "key": "/profile/collections_params.PIN_FLD_COLLECTIONS_PARAMS",
+            "operator": "GT",
+            "value": "22"
+        }]
+}
+]

@@ -1,0 +1,1245 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>ExtentReports</title>
+	<meta name="description" content="extent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="extent">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@832f979664f9d68bf618db3ac87498ac6c1a6390/logger/css/logger-style.css" type="text/css" />
+</head>
+	<body class="standard">
+		<div class="app" id="app">
+<div id="aside" class="app-aside fade box-shadow-x folded dark">
+	<div class="sidenav modal-dialog dk">
+		<div class="navbar">
+			<a href="#" class="navbar-brand">
+			<span class="d-inline small"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></span>
+			</a>
+		</div>
+		<div class="flex hide-scroll">
+			<div class="scroll">
+				<div class="nav-border b-primary">
+					<ul class="nav bg">
+						<li>
+							<a href="index.html">
+							<span class="nav-icon">
+							<i class="fa fa-align-left"></i>
+							</span>
+							<span class="nav-text">Tests</span>
+							</a>
+						</li>
+												<li>
+							<a href="tag.html">
+							<span class="nav-icon">
+							<i class="fa fa-tag"></i>
+							</span>
+							<span class="nav-text">Tags</span>
+							</a>
+						</li>
+						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
+							<a href="dashboard.html">
+							<span class="nav-icon">
+							<i class="fa fa-dashboard"></i>
+							</span>
+							<span class="nav-text">Dashboard</span>
+							</a>
+						</li>
+						<li class="pb-2 hidden-folded"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="no-shrink">
+			<div class="nav-fold">
+				<a id="lightsout" class="d-flex p-2-3"><span><i class="fa fa-desktop"></i></span></a>
+				<div class="hidden-folded flex p-2-3 bg">
+					<div class="d-flex p-1">
+						<a href="http://github.com/extent-framework/extentreports" class="flex text-nowrap"><i class="fa fa-github"></i></a>
+						<a href="http://extentreports.com" class="px-2"><i class="fa fa-book"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>			<div id="content" class="app-content box-shadow-0" role="main">
+				<div class="content-header white box-shadow d-lg-none" id="content-header">
+					<div class="navbar navbar-expand-lg">
+						<a class="d-lg-none mx-2" data-toggle="modal" data-target="#aside">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+								<path d="M80 304h352v16H80zM80 248h352v16H80zM80 192h352v16H80z"/>
+							</svg>
+						</a>
+						<div class="navbar-text nav-title flex" id="pageTitle"><img src="logo.png"></div>
+					</div>
+				</div>
+				<div class="content-main d-flex flex" id="content-main">
+					<div class="d-flex flex fixed-height">
+
+<div class="fade aside aside-sm b-r" id="content-aside">
+	<div class="modal-dialog d-flex flex-column h-100">
+		<div class="navbar box-shadow">
+			<div class="input-group flex mr-1">
+              	<input id="qt" type="text" class="form-control px-0 no-bg no-border no-shadow search" placeholder="Search..." required="">
+              	<span class="input-group-btn">
+                	<button class="btn no-bg no-border no-shadow" type="button"><i class="fa fa-search text-muted text-xs"></i></button>
+              	</span>
+            </div>
+		</div>
+		<div class="scrollable hover">
+			<div class="list inset">
+				<div class="p-2 px-3 text-muted text-sm">Tags</div>
+					<div class="list-item attr">
+						<div class="list-body">
+							<a href="#" class="item-title _500">@init</a>
+							<div class="item-except text-sm text-muted h-1x">
+								1 tests
+							</div>
+							<div class="tc d-none">
+								<h5>@init</h5>
+								<div class="mb-4">
+									<span class="badge pass text-pass">1 passed</span>
+									<span class="badge pass text-fail">0 failed</span>
+									<span class="badge pass text-skip">0 skipped</span>
+								</div>
+								<table class="table">
+									<thead><tr>
+										<th id="status-col"></th>
+										<th>Test</th>
+										<th>Duration</th>
+										<th>Attributes</th>
+										<th>Media</th>
+										<th>Source</th>
+									</tr></thead>
+									<tbody>
+	
+<tr class="s-pass" test-id="2" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">initialize output stream to store log to extract sysout messages to text file as log <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 0s+2msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @init</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div>
+							<span class="item-meta text-xs lt">
+							<span class="badge pass text-pass">1</span> <span class="badge fail text-fail">0</span> <span class="badge skip text-skip">0</span>
+							</span>
+						</div>
+					</div>
+					<div class="list-item attr">
+						<div class="list-body">
+							<a href="#" class="item-title _500">@Regression</a>
+							<div class="item-except text-sm text-muted h-1x">
+								27 tests
+							</div>
+							<div class="tc d-none">
+								<h5>@Regression</h5>
+								<div class="mb-4">
+									<span class="badge pass text-pass">22 passed</span>
+									<span class="badge pass text-fail">5 failed</span>
+									<span class="badge pass text-skip">0 skipped</span>
+								</div>
+								<table class="table">
+									<thead><tr>
+										<th id="status-col"></th>
+										<th>Test</th>
+										<th>Duration</th>
+										<th>Attributes</th>
+										<th>Media</th>
+										<th>Source</th>
+									</tr></thead>
+									<tbody>
+	
+<tr class="s-pass" test-id="2" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">initialize output stream to store log to extract sysout messages to text file as log <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 0s+2msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @init</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="4" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellites list is returned with id & name and it should return only one list which is currently available <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 3s+599msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @getSatellitesList</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="10" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether get satellites API is returning 404 as error when endpoint is incorrect <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 1s+370msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @getSatellitesList</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @negativeTest</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="15" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether suppress_response_codes funcitonality is working or not for get satellites API <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 1s+328msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @getSatellitesList</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @negativeTest</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-fail" test-id="20" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 6s+830msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+	</td>
+</tr>
+	
+<tr class="s-pass" test-id="21" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">GET satellite info with/without optional parameters units, timestamp</span></td>
+	<td>0h 0m 1s+384msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="28" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">GET satellite info with/without optional parameters units, timestamp</span></td>
+	<td>0h 0m 1s+347msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-fail" test-id="35" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">GET satellite info with/without optional parameters units, timestamp</span></td>
+	<td>0h 0m 1s+360msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+	</td>
+</tr>
+	
+<tr class="s-pass" test-id="42" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">GET satellite info with/without optional parameters units, timestamp</span></td>
+	<td>0h 0m 1s+367msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="49" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">GET satellite info with/without optional parameters units, timestamp</span></td>
+	<td>0h 0m 1s+344msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-fail" test-id="56" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 6s+649msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+	</td>
+</tr>
+	
+<tr class="s-pass" test-id="57" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">validate satellite list with specified coordinates</span></td>
+	<td>0h 0m 1s+339msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-fail" test-id="63" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">validate satellite list with specified coordinates</span></td>
+	<td>0h 0m 1s+328msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+	</td>
+</tr>
+	
+<tr class="s-pass" test-id="69" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">validate satellite list with specified coordinates</span></td>
+	<td>0h 0m 1s+295msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="75" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">validate satellite list with specified coordinates</span></td>
+	<td>0h 0m 1s+327msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-fail" test-id="81" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">validate satellite list with specified coordinates</span></td>
+	<td>0h 0m 1s+343msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+	</td>
+</tr>
+	
+<tr class="s-pass" test-id="87" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether TLE Data from satellite API returning in JSON/Text format <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 3s+944msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateTLE</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="88" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether TLE Data from satellite API returning in JSON/Text format <br/><span class="text-muted text-sm">Validate whether TLE Data from satellite API returning in JSON/Text format</span></td>
+	<td>0h 0m 1s+295msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateTLE</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="95" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether TLE Data from satellite API returning in JSON/Text format <br/><span class="text-muted text-sm">Validate whether TLE Data from satellite API returning in JSON/Text format</span></td>
+	<td>0h 0m 1s+341msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateTLE</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="102" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether TLE Data from satellite API returning in JSON/Text format <br/><span class="text-muted text-sm">Validate whether TLE Data from satellite API returning in JSON/Text format</span></td>
+	<td>0h 0m 1s+300msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateTLE</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="109" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 10s+265msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="110" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 1s+380msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="120" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 1s+337msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="130" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 1s+812msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="140" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 1s+762msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="150" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 1s+733msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="160" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 2s+226msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div>
+							<span class="item-meta text-xs lt">
+							<span class="badge pass text-pass">22</span> <span class="badge fail text-fail">5</span> <span class="badge skip text-skip">0</span>
+							</span>
+						</div>
+					</div>
+					<div class="list-item attr">
+						<div class="list-body">
+							<a href="#" class="item-title _500">@getSatellitesList</a>
+							<div class="item-except text-sm text-muted h-1x">
+								3 tests
+							</div>
+							<div class="tc d-none">
+								<h5>@getSatellitesList</h5>
+								<div class="mb-4">
+									<span class="badge pass text-pass">3 passed</span>
+									<span class="badge pass text-fail">0 failed</span>
+									<span class="badge pass text-skip">0 skipped</span>
+								</div>
+								<table class="table">
+									<thead><tr>
+										<th id="status-col"></th>
+										<th>Test</th>
+										<th>Duration</th>
+										<th>Attributes</th>
+										<th>Media</th>
+										<th>Source</th>
+									</tr></thead>
+									<tbody>
+	
+<tr class="s-pass" test-id="4" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellites list is returned with id & name and it should return only one list which is currently available <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 3s+599msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @getSatellitesList</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="10" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether get satellites API is returning 404 as error when endpoint is incorrect <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 1s+370msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @getSatellitesList</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @negativeTest</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="15" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether suppress_response_codes funcitonality is working or not for get satellites API <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 1s+328msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @getSatellitesList</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @negativeTest</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div>
+							<span class="item-meta text-xs lt">
+							<span class="badge pass text-pass">3</span> <span class="badge fail text-fail">0</span> <span class="badge skip text-skip">0</span>
+							</span>
+						</div>
+					</div>
+					<div class="list-item attr">
+						<div class="list-body">
+							<a href="#" class="item-title _500">@negativeTest</a>
+							<div class="item-except text-sm text-muted h-1x">
+								2 tests
+							</div>
+							<div class="tc d-none">
+								<h5>@negativeTest</h5>
+								<div class="mb-4">
+									<span class="badge pass text-pass">2 passed</span>
+									<span class="badge pass text-fail">0 failed</span>
+									<span class="badge pass text-skip">0 skipped</span>
+								</div>
+								<table class="table">
+									<thead><tr>
+										<th id="status-col"></th>
+										<th>Test</th>
+										<th>Duration</th>
+										<th>Attributes</th>
+										<th>Media</th>
+										<th>Source</th>
+									</tr></thead>
+									<tbody>
+	
+<tr class="s-pass" test-id="10" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether get satellites API is returning 404 as error when endpoint is incorrect <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 1s+370msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @getSatellitesList</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @negativeTest</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="15" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether suppress_response_codes funcitonality is working or not for get satellites API <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 1s+328msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @getSatellitesList</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @negativeTest</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div>
+							<span class="item-meta text-xs lt">
+							<span class="badge pass text-pass">2</span> <span class="badge fail text-fail">0</span> <span class="badge skip text-skip">0</span>
+							</span>
+						</div>
+					</div>
+					<div class="list-item attr">
+						<div class="list-body">
+							<a href="#" class="item-title _500">@validateSatInfo</a>
+							<div class="item-except text-sm text-muted h-1x">
+								6 tests
+							</div>
+							<div class="tc d-none">
+								<h5>@validateSatInfo</h5>
+								<div class="mb-4">
+									<span class="badge pass text-pass">4 passed</span>
+									<span class="badge pass text-fail">2 failed</span>
+									<span class="badge pass text-skip">0 skipped</span>
+								</div>
+								<table class="table">
+									<thead><tr>
+										<th id="status-col"></th>
+										<th>Test</th>
+										<th>Duration</th>
+										<th>Attributes</th>
+										<th>Media</th>
+										<th>Source</th>
+									</tr></thead>
+									<tbody>
+	
+<tr class="s-fail" test-id="20" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 6s+830msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+	</td>
+</tr>
+	
+<tr class="s-pass" test-id="21" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">GET satellite info with/without optional parameters units, timestamp</span></td>
+	<td>0h 0m 1s+384msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="28" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">GET satellite info with/without optional parameters units, timestamp</span></td>
+	<td>0h 0m 1s+347msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-fail" test-id="35" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">GET satellite info with/without optional parameters units, timestamp</span></td>
+	<td>0h 0m 1s+360msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+	</td>
+</tr>
+	
+<tr class="s-pass" test-id="42" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">GET satellite info with/without optional parameters units, timestamp</span></td>
+	<td>0h 0m 1s+367msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="49" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">GET satellite info with/without optional parameters units, timestamp <br/><span class="text-muted text-sm">GET satellite info with/without optional parameters units, timestamp</span></td>
+	<td>0h 0m 1s+344msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatInfo</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div>
+							<span class="item-meta text-xs lt">
+							<span class="badge pass text-pass">4</span> <span class="badge fail text-fail">2</span> <span class="badge skip text-skip">0</span>
+							</span>
+						</div>
+					</div>
+					<div class="list-item attr">
+						<div class="list-body">
+							<a href="#" class="item-title _500">@validateSatpositions</a>
+							<div class="item-except text-sm text-muted h-1x">
+								6 tests
+							</div>
+							<div class="tc d-none">
+								<h5>@validateSatpositions</h5>
+								<div class="mb-4">
+									<span class="badge pass text-pass">3 passed</span>
+									<span class="badge pass text-fail">3 failed</span>
+									<span class="badge pass text-skip">0 skipped</span>
+								</div>
+								<table class="table">
+									<thead><tr>
+										<th id="status-col"></th>
+										<th>Test</th>
+										<th>Duration</th>
+										<th>Attributes</th>
+										<th>Media</th>
+										<th>Source</th>
+									</tr></thead>
+									<tbody>
+	
+<tr class="s-fail" test-id="56" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 6s+649msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+	</td>
+</tr>
+	
+<tr class="s-pass" test-id="57" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">validate satellite list with specified coordinates</span></td>
+	<td>0h 0m 1s+339msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-fail" test-id="63" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">validate satellite list with specified coordinates</span></td>
+	<td>0h 0m 1s+328msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+	</td>
+</tr>
+	
+<tr class="s-pass" test-id="69" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">validate satellite list with specified coordinates</span></td>
+	<td>0h 0m 1s+295msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="75" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">validate satellite list with specified coordinates</span></td>
+	<td>0h 0m 1s+327msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-fail" test-id="81" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">validate satellite list with specified coordinates <br/><span class="text-muted text-sm">validate satellite list with specified coordinates</span></td>
+	<td>0h 0m 1s+343msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateSatpositions</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+	</td>
+</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div>
+							<span class="item-meta text-xs lt">
+							<span class="badge pass text-pass">3</span> <span class="badge fail text-fail">3</span> <span class="badge skip text-skip">0</span>
+							</span>
+						</div>
+					</div>
+					<div class="list-item attr">
+						<div class="list-body">
+							<a href="#" class="item-title _500">@validateTLE</a>
+							<div class="item-except text-sm text-muted h-1x">
+								4 tests
+							</div>
+							<div class="tc d-none">
+								<h5>@validateTLE</h5>
+								<div class="mb-4">
+									<span class="badge pass text-pass">4 passed</span>
+									<span class="badge pass text-fail">0 failed</span>
+									<span class="badge pass text-skip">0 skipped</span>
+								</div>
+								<table class="table">
+									<thead><tr>
+										<th id="status-col"></th>
+										<th>Test</th>
+										<th>Duration</th>
+										<th>Attributes</th>
+										<th>Media</th>
+										<th>Source</th>
+									</tr></thead>
+									<tbody>
+	
+<tr class="s-pass" test-id="87" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether TLE Data from satellite API returning in JSON/Text format <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 3s+944msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateTLE</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="88" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether TLE Data from satellite API returning in JSON/Text format <br/><span class="text-muted text-sm">Validate whether TLE Data from satellite API returning in JSON/Text format</span></td>
+	<td>0h 0m 1s+295msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateTLE</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="95" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether TLE Data from satellite API returning in JSON/Text format <br/><span class="text-muted text-sm">Validate whether TLE Data from satellite API returning in JSON/Text format</span></td>
+	<td>0h 0m 1s+341msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateTLE</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="102" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether TLE Data from satellite API returning in JSON/Text format <br/><span class="text-muted text-sm">Validate whether TLE Data from satellite API returning in JSON/Text format</span></td>
+	<td>0h 0m 1s+300msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validateTLE</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div>
+							<span class="item-meta text-xs lt">
+							<span class="badge pass text-pass">4</span> <span class="badge fail text-fail">0</span> <span class="badge skip text-skip">0</span>
+							</span>
+						</div>
+					</div>
+					<div class="list-item attr">
+						<div class="list-body">
+							<a href="#" class="item-title _500">@validatecoord</a>
+							<div class="item-except text-sm text-muted h-1x">
+								7 tests
+							</div>
+							<div class="tc d-none">
+								<h5>@validatecoord</h5>
+								<div class="mb-4">
+									<span class="badge pass text-pass">7 passed</span>
+									<span class="badge pass text-fail">0 failed</span>
+									<span class="badge pass text-skip">0 skipped</span>
+								</div>
+								<table class="table">
+									<thead><tr>
+										<th id="status-col"></th>
+										<th>Test</th>
+										<th>Duration</th>
+										<th>Attributes</th>
+										<th>Media</th>
+										<th>Source</th>
+									</tr></thead>
+									<tbody>
+	
+<tr class="s-pass" test-id="109" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span></td>
+	<td>0h 0m 10s+265msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="110" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 1s+380msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="120" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 1s+337msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="130" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 1s+812msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="140" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 1s+762msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="150" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 1s+733msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+	
+<tr class="s-pass" test-id="160" parent-id="1">
+	<td><span class="w-32 avatar circle pass"><span class="badge">pass</span></span></td>
+	<td class="_600">Validate whether satellite API returning correct data with co-ordinates <br/><span class="text-muted text-sm">Validate whether satellite API returning correct data with co-ordinates</span></td>
+	<td>0h 0m 2s+226msc</td>
+	<td>		<span class="category-list attr-x">
+		<span class="category badge"><i class="fa fa-tag"></i> @validatecoord</span>
+		<span class="category badge"><i class="fa fa-tag"></i> @Regression</span>
+		</span>
+</td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div>
+							<span class="item-meta text-xs lt">
+							<span class="badge pass text-pass">7</span> <span class="badge fail text-fail">0</span> <span class="badge skip text-skip">0</span>
+							</span>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>						<div class="d-flex flex" id="content-body">
+							<div class="d-flex flex-column flex white">
+								<div class="navbar flex-nowrap box-shadow">
+									<a data-toggle="modal" data-target="#content-aside" data-modal class="mr-1 d-md-none">
+									<span class="btn btn-sm btn-icon primary">
+									<i class="fa fa-th"></i>
+									</span>
+									</a>
+									<div class="input-group flex mr-1 hidden-sm-down">
+						              	<input id="qc" type="text" class="form-control px-0 no-bg no-border no-shadow search" placeholder="Search..." required="">
+						              	<span class="input-group-btn">
+						                	<button class="btn no-bg no-border no-shadow" type="button"><i class="fa fa-search text-muted text-xs"></i></button>
+						              	</span>
+						            </div>
+									<ul class="nav nav-xs flex-row no-border pull-right">
+								        <li class="nav-item dropdown">
+									        <a class="nav-link b-l" data-toggle="dropdown">
+									            <span class="text-xs ">
+										      		<i class="fa fa-warning"></i>
+										      		<i class="fa fa-caret-down"></i>
+										        </span>
+									        </a>
+								        </li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 19, 2021 06:28:32 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
+								    </ul>
+								</div>
+								<div class="scroll-y">
+									<div id="tcp" class="p-3"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@832f979664f9d68bf618db3ac87498ac6c1a6390/commons/js/attr.js"></script>
+	</body>
+</html>

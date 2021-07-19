@@ -1,0 +1,20 @@
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+Satellite URL:https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=21436029892,1436029902&units=miles
+Response: [{"name":"iss","id":25544,"latitude":27.760604595457,"longitude":-4.8000397465626,"altitude":56442619958.559,"velocity":4.7022200922069,"visibility":"daylight","footprint":12450.780698552,"timestamp":21436029892,"daynum":2688689.6978241,"solar_lat":9.0596085774637,"solar_lon":108.93264705867,"units":"miles"},{"name":"iss","id":25544,"latitude":-25.344256596171,"longitude":18.04663730318,"altitude":253.53270332355,"velocity":17148.247302231,"visibility":"daylight","footprint":2762.6234978127,"timestamp":1436029902,"daynum":2457208.2164583,"solar_lat":22.854640837166,"solar_lon":283.17877169756,"units":"miles"}]
+io.restassured.internal.ValidatableResponseImpl@7e94d093
+2
+21436029892 ,Satelitte Id & units are validated
+1436029902 ,Satelitte Id & units are validated
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+Satellite URL:https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=1436029902&units=null
+Response: [{"name":"iss","id":25544,"latitude":-25.344256596171,"longitude":18.04663730318,"altitude":408.02146112959,"velocity":27597.437444347,"visibility":"daylight","footprint":4446.0129259536,"timestamp":1436029902,"daynum":2457208.2164583,"solar_lat":22.854640837166,"solar_lon":283.17877169756,"units":"kilometers"}]
+io.restassured.internal.ValidatableResponseImpl@72e295cc
+1
+1436029902 ,Satelitte Id & units are validated
+stellite URL :https://api.wheretheiss.at/v1/satellites/25544
+Satellite URL:https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps=21433429892,1436169902&units=null
+Response: [{"name":"iss","id":25544,"latitude":31.276072920192,"longitude":-167.65931128738,"altitude":49192917593.746,"velocity":10.266783539617,"visibility":"daylight","footprint":20037.594653455,"timestamp":21433429892,"daynum":2688659.6052315,"solar_lat":-2.582672361024,"solar_lon":144.25672717733,"units":"kilometers"},{"name":"iss","id":25544,"latitude":-46.499352699866,"longitude":-112.87605053726,"altitude":418.51609520579,"velocity":27570.719906378,"visibility":"eclipsed","footprint":4499.9063012085,"timestamp":1436169902,"daynum":2457209.8368287,"solar_lat":22.702548672664,"solar_lon":59.915736258763,"units":"kilometers"}]
+io.restassured.internal.ValidatableResponseImpl@5c441290
+2
+21433429892 ,Satelitte Id & units are validated
+1436169902 ,Satelitte Id & units are validated

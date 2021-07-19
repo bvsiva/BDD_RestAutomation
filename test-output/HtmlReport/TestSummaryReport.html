@@ -1,0 +1,1936 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Jul 19, 2021 06:28:32 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@init</a></li>
+					<li><a href='#'>@Regression</a></li>
+					<li><a href='#'>@getSatellitesList</a></li>
+					<li><a href='#'>@negativeTest</a></li>
+					<li><a href='#'>@validateSatInfo</a></li>
+					<li><a href='#'>@validateSatpositions</a></li>
+					<li><a href='#'>@validateTLE</a></li>
+					<li><a href='#'>@validatecoord</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='86.957%'><span class='strong'>20</span> scenario(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='13.043%'>3</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='95.745%'><span class='strong'>135</span> step(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='2.128%'>3</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='2.128%'>3</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='2.128%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone</span>
+						<span class='test-time'>Jul 19, 2021 06:28:32 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario node' test-id='2' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@init</span>
+		<span class='category label'>@Regression</span>
+	</div>
+	<span class='duration right label'>0h 0m 0s+2ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: initialize output stream to store log to extract sysout messages to text file as log</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='3' class='node given pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.initialize_output_stream_for_log()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given initialize output stream for log</div>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='4' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@Regression</span>
+		<span class='category label'>@getSatellitesList</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+599ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate whether satellites list is returned with id & name and it should return only one list which is currently available</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='5' class='node given pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='6' class='node when pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='7' class='node then pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='8' class='node and pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And returned satellite list should be 1</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='9' class='node and pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.satellite_id_name_should_not_be_null()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And satellite id, name should not be null</div>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='10' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@getSatellitesList</span>
+		<span class='category label'>@Regression</span>
+		<span class='category label'>@negativeTest</span>
+	</div>
+	<span class='duration right label'>0h 0m 1s+370ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate whether get satellites API is returning 404 as error when endpoint is incorrect</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='11' class='node given pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.invalid_resource_url_for_satellites_api()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given invalid Resource URL for satellites API</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='12' class='node when pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='13' class='node then pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 404</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='14' class='node then pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.error_message_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then error message should be "Invalid controller specified (satellite)"</div>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='15' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@getSatellitesList</span>
+		<span class='category label'>@Regression</span>
+		<span class='category label'>@negativeTest</span>
+	</div>
+	<span class='duration right label'>0h 0m 1s+328ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Validate whether suppress_response_codes funcitonality is working or not for get satellites API</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='16' class='node given pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.invalid_resource_url_for_satellites_api_with(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given invalid Resource URL for satellites API with "suppress_response_codes"</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='17' class='node when pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='18' class='node then pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='19' class='node then pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.GlueCode_getSatList.error_message_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then error message should be "Invalid controller specified (satellite)"</div>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='20' status='fail'>
+	<div class='category-list'>
+		<span class='category label'>@validateSatInfo</span>
+		<span class='category label'>@Regression</span>
+	</div>
+	<span class='duration right label'>0h 0m 6s+830ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: GET satellite info with/without optional parameters units, timestamp</div>
+		<table class='runtime-table table-striped table'><tr><td>satelliteId</td><td>units</td><td>timeStamp</td><td>statusCode</td><td>resUnits</td></tr><tr><td>25544</td><td>miles</td><td>234</td><td>200</td><td>miles</td></tr><tr><td>25544</td><td>null</td><td>1245</td><td>200</td><td>kilometers</td></tr><tr><td>25544</td><td></td><td>null</td><td>200</td><td>kilometers</td></tr><tr><td>25544</td><td></td><td>1245</td><td>200</td><td>kilometers</td></tr><tr><td>25544</td><td>miles</td><td>1245</td><td>200</td><td>miles</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='21' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>GET satellite info with/without optional parameters units, timestamp</div>
+			<ul class='gc steps'>
+				<li test-id='22' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='23' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.units_as_timestamp_as(java.lang.String,java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And units as "miles", timestamp as 234</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='24' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='25' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='26' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And satellite id should not be 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='27' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And units should be "miles"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='28' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>GET satellite info with/without optional parameters units, timestamp</div>
+			<ul class='gc steps'>
+				<li test-id='29' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='30' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.units_as_timestamp_as(java.lang.String,java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And units as "null", timestamp as 1245</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='31' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='32' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='33' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And satellite id should not be 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='34' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And units should be "kilometers"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='35' class='node scenario fail' status='fail'>
+			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>GET satellite info with/without optional parameters units, timestamp</div>
+			<ul class='gc steps'>
+				<li test-id='36' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='37' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.units_as_timestamp_as_null(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And units as "", timestamp as null</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='38' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='39' class='gc then fail' status='fail'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then I Receive Response code as 200</h6>
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(GlueCode_getSatList.java:77)
+	at ✽.I Receive Response code as 200(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:34)
+</textarea>
+				</li>
+				<li test-id='40' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And satellite id should not be 25544</h6>
+					<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='41' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And units should be "kilometers"</h6>
+					<div class="node-step">Step skipped</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='42' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>GET satellite info with/without optional parameters units, timestamp</div>
+			<ul class='gc steps'>
+				<li test-id='43' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='44' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.units_as_timestamp_as(java.lang.String,java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And units as "", timestamp as 1245</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='45' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='46' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='47' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And satellite id should not be 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='48' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And units should be "kilometers"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='49' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>GET satellite info with/without optional parameters units, timestamp</div>
+			<ul class='gc steps'>
+				<li test-id='50' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='51' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.units_as_timestamp_as(java.lang.String,java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And units as "miles", timestamp as 1245</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='52' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='53' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='54' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And satellite id should not be 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='55' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And units should be "miles"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='56' status='fail'>
+	<div class='category-list'>
+		<span class='category label'>@validateSatpositions</span>
+		<span class='category label'>@Regression</span>
+	</div>
+	<span class='duration right label'>0h 0m 6s+649ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: validate satellite list with specified coordinates</div>
+		<table class='runtime-table table-striped table'><tr><td>satelliteId</td><td>units</td><td>timeStamp</td><td>statusCode</td><td>resUnits</td></tr><tr><td>25544</td><td>miles</td><td>21436029892,1436029902</td><td>200</td><td>miles</td></tr><tr><td>25544</td><td>miles</td><td>none</td><td>200</td><td>miles</td></tr><tr><td>25544</td><td>null</td><td>1436029902</td><td>200</td><td>kilometers</td></tr><tr><td>25544</td><td>null</td><td>21433429892,1436169902</td><td>200</td><td>kilometers</td></tr><tr><td>25544</td><td>null</td><td>21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911</td><td>200</td><td>kilometers</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='57' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>validate satellite list with specified coordinates</div>
+			<ul class='gc steps'>
+				<li test-id='58' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='59' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And add positions to endpoint with units as "miles", timestamp as "21436029892,1436029902"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='60' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='61' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='62' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And returned satellite list should be equal to number in "21436029892,1436029902" and units should be "miles" and 25544> is same</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='63' class='node scenario fail' status='fail'>
+			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>validate satellite list with specified coordinates</div>
+			<ul class='gc steps'>
+				<li test-id='64' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='65' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And add positions to endpoint with units as "miles", timestamp as "none"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='66' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='67' class='gc then fail' status='fail'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then I Receive Response code as 200</h6>
+					<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(GlueCode_getSatList.java:77)
+	at ✽.I Receive Response code as 200(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:50)
+</textarea>
+				</li>
+				<li test-id='68' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And returned satellite list should be equal to number in "none" and units should be "miles" and 25544> is same</h6>
+					<div class="node-step">Step skipped</div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='69' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>validate satellite list with specified coordinates</div>
+			<ul class='gc steps'>
+				<li test-id='70' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='71' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And add positions to endpoint with units as "null", timestamp as "1436029902"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='72' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='73' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='74' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And returned satellite list should be equal to number in "1436029902" and units should be "kilometers" and 25544> is same</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='75' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>validate satellite list with specified coordinates</div>
+			<ul class='gc steps'>
+				<li test-id='76' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='77' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And add positions to endpoint with units as "null", timestamp as "21433429892,1436169902"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='78' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='79' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='80' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And returned satellite list should be equal to number in "21433429892,1436169902" and units should be "kilometers" and 25544> is same</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='81' class='node scenario fail' status='fail'>
+			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>validate satellite list with specified coordinates</div>
+			<ul class='gc steps'>
+				<li test-id='82' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='83' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And add positions to endpoint with units as "null", timestamp as "21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='84' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='85' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='86' class='gc and fail' status='fail'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And returned satellite list should be equal to number in "21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911" and units should be "kilometers" and 25544> is same</h6>
+					<textarea disabled class="code-block">java.lang.AssertionError: expected:<10> but was:<11>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(GlueCode_getSatList.java:276)
+	at ✽.returned satellite list should be equal to number in "21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911" and units should be "kilometers" and 25544> is same(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:51)
+</textarea>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='87' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@validateTLE</span>
+		<span class='category label'>@Regression</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+944ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validate whether TLE Data from satellite API returning in JSON/Text format</div>
+		<table class='runtime-table table-striped table'><tr><td>satelliteId</td><td>format</td><td>statusCode</td><td>resFormat</td></tr><tr><td>25544</td><td>json</td><td>200</td><td>Content-Type=application/json</td></tr><tr><td>25544</td><td>text</td><td>200</td><td>Content-Type=text/plain</td></tr><tr><td>25544</td><td></td><td>200</td><td>Content-Type=application/json</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='88' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate whether TLE Data from satellite API returning in JSON/Text format</div>
+			<ul class='gc steps'>
+				<li test-id='89' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_fetch_tles_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API to fetch tles with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='90' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.given_format_query_parm_as(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And given format query parm as "json"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='91' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='92' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='93' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.response_format_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response format should be "Content-Type=application/json"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='94' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.verify_x_rate_limit_remaining_is_not(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify X-Rate-Limit-Remaining is not 0</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='95' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate whether TLE Data from satellite API returning in JSON/Text format</div>
+			<ul class='gc steps'>
+				<li test-id='96' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_fetch_tles_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API to fetch tles with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='97' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.given_format_query_parm_as(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And given format query parm as "text"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='98' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='99' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='100' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.response_format_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response format should be "Content-Type=text/plain"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='101' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.verify_x_rate_limit_remaining_is_not(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify X-Rate-Limit-Remaining is not 0</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='102' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate whether TLE Data from satellite API returning in JSON/Text format</div>
+			<ul class='gc steps'>
+				<li test-id='103' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_fetch_tles_with(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API to fetch tles with 25544</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='104' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.given_format_query_parm_as(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And given format query parm as ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='105' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='106' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='107' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.response_format_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Response format should be "Content-Type=application/json"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='108' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.verify_x_rate_limit_remaining_is_not(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And verify X-Rate-Limit-Remaining is not 0</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='109' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@validatecoord</span>
+		<span class='category label'>@Regression</span>
+	</div>
+	<span class='duration right label'>0h 0m 10s+265ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Validate whether satellite API returning correct data with co-ordinates</div>
+		<table class='runtime-table table-striped table'><tr><td>latitude</td><td>longitude</td><td>statusCode</td><td>countrycode</td><td>offset</td><td>timezone_id</td><td>elatitude</td><td>elongitude</td><td>error</td></tr><tr><td>20.593683</td><td>78.962883</td><td>200</td><td>IN</td><td>5.5</td><td>Asia/Kolkata</td><td>20.593683</td><td>78.962883</td><td></td></tr><tr><td>51.507351</td><td>-0.127758</td><td>200</td><td>GB</td><td>1</td><td>Europe/London</td><td>51.507351</td><td>-0.127758</td><td></td></tr><tr><td>90.593683</td><td>78.962883</td><td>500</td><td></td><td></td><td></td><td></td><td></td><td>application error</td></tr><tr><td>-91.507351</td><td>-0.127758</td><td>500</td><td></td><td></td><td></td><td></td><td></td><td>application error</td></tr><tr><td>20.593683</td><td>181.962883</td><td>500</td><td></td><td></td><td></td><td></td><td></td><td>application error</td></tr><tr><td>-21.507351</td><td>-180.127758</td><td>500</td><td></td><td></td><td></td><td></td><td></td><td>application error</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='110' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate whether satellite API returning correct data with co-ordinates</div>
+			<ul class='gc steps'>
+				<li test-id='111' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API to with 20.593683,78.962883</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='112' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='113' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='114' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And longitude should be "78.962883"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='115' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And latitude should be "20.593683"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='116' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And countrycode should be "IN"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='117' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And offset should be "5.5"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='118' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And timezone_id should be "Asia/Kolkata"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='119' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And error should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='120' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate whether satellite API returning correct data with co-ordinates</div>
+			<ul class='gc steps'>
+				<li test-id='121' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API to with 51.507351,-0.127758</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='122' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='123' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 200</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='124' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And longitude should be "-0.127758"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='125' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And latitude should be "51.507351"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='126' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And countrycode should be "GB"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='127' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And offset should be "1"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='128' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And timezone_id should be "Europe/London"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='129' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And error should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='130' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate whether satellite API returning correct data with co-ordinates</div>
+			<ul class='gc steps'>
+				<li test-id='131' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API to with 90.593683,78.962883</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='132' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='133' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 500</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='134' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And longitude should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='135' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And latitude should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='136' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And countrycode should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='137' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And offset should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='138' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And timezone_id should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='139' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And error should be "application error"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='140' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate whether satellite API returning correct data with co-ordinates</div>
+			<ul class='gc steps'>
+				<li test-id='141' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API to with -91.507351,-0.127758</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='142' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='143' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 500</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='144' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And longitude should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='145' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And latitude should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='146' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And countrycode should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='147' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And offset should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='148' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And timezone_id should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='149' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And error should be "application error"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='150' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate whether satellite API returning correct data with co-ordinates</div>
+			<ul class='gc steps'>
+				<li test-id='151' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API to with 20.593683,181.962883</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='152' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='153' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 500</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='154' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And longitude should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='155' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And latitude should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='156' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And countrycode should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='157' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And offset should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='158' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And timezone_id should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='159' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And error should be "application error"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='160' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Validate whether satellite API returning correct data with co-ordinates</div>
+			<ul class='gc steps'>
+				<li test-id='161' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given valid Resource URL for satellites API to with -21.507351,-180.127758</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='162' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When trigger a GET HTTP request</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='163' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then I Receive Response code as 500</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='164' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And longitude should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='165' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And latitude should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='166' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And countrycode should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='167' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And offset should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='168' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And timezone_id should be ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='169' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And error should be "application error"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@init</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 19, 2021 06:28:32 PM</td>
+										<td class='linked' test-id='2'>initialize output stream to store log to extract sysout messages to text file as log</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Regression</span>
+						<span class='category-status right'>
+						<span class='label pass'>22</span>
+						<span class='label fail'>5</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 22</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 5</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 19, 2021 06:28:32 PM</td>
+										<td class='linked' test-id='2'>initialize output stream to store log to extract sysout messages to text file as log</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:32 PM</td>
+										<td class='linked' test-id='4'>Validate whether satellites list is returned with id & name and it should return only one list which is currently available</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:36 PM</td>
+										<td class='linked' test-id='10'>Validate whether get satellites API is returning 404 as error when endpoint is incorrect</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:37 PM</td>
+										<td class='linked' test-id='15'>Validate whether suppress_response_codes funcitonality is working or not for get satellites API</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:39 PM</td>
+										<td class='linked' test-id='20'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:39 PM</td>
+										<td class='linked' test-id='21'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:40 PM</td>
+										<td class='linked' test-id='28'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:41 PM</td>
+										<td class='linked' test-id='35'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:43 PM</td>
+										<td class='linked' test-id='42'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:44 PM</td>
+										<td class='linked' test-id='49'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:45 PM</td>
+										<td class='linked' test-id='56'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:45 PM</td>
+										<td class='linked' test-id='57'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:47 PM</td>
+										<td class='linked' test-id='63'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:48 PM</td>
+										<td class='linked' test-id='69'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:49 PM</td>
+										<td class='linked' test-id='75'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:51 PM</td>
+										<td class='linked' test-id='81'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:52 PM</td>
+										<td class='linked' test-id='87'>Validate whether TLE Data from satellite API returning in JSON/Text format</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:52 PM</td>
+										<td class='linked' test-id='88'>Validate whether TLE Data from satellite API returning in JSON/Text format</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:53 PM</td>
+										<td class='linked' test-id='95'>Validate whether TLE Data from satellite API returning in JSON/Text format</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:55 PM</td>
+										<td class='linked' test-id='102'>Validate whether TLE Data from satellite API returning in JSON/Text format</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:56 PM</td>
+										<td class='linked' test-id='109'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:56 PM</td>
+										<td class='linked' test-id='110'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:57 PM</td>
+										<td class='linked' test-id='120'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:59 PM</td>
+										<td class='linked' test-id='130'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:29:01 PM</td>
+										<td class='linked' test-id='140'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:29:02 PM</td>
+										<td class='linked' test-id='150'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:29:04 PM</td>
+										<td class='linked' test-id='160'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@getSatellitesList</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 19, 2021 06:28:32 PM</td>
+										<td class='linked' test-id='4'>Validate whether satellites list is returned with id & name and it should return only one list which is currently available</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:36 PM</td>
+										<td class='linked' test-id='10'>Validate whether get satellites API is returning 404 as error when endpoint is incorrect</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:37 PM</td>
+										<td class='linked' test-id='15'>Validate whether suppress_response_codes funcitonality is working or not for get satellites API</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@negativeTest</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 19, 2021 06:28:36 PM</td>
+										<td class='linked' test-id='10'>Validate whether get satellites API is returning 404 as error when endpoint is incorrect</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:37 PM</td>
+										<td class='linked' test-id='15'>Validate whether suppress_response_codes funcitonality is working or not for get satellites API</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@validateSatInfo</span>
+						<span class='category-status right'>
+						<span class='label pass'>4</span>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 19, 2021 06:28:39 PM</td>
+										<td class='linked' test-id='20'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:39 PM</td>
+										<td class='linked' test-id='21'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:40 PM</td>
+										<td class='linked' test-id='28'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:41 PM</td>
+										<td class='linked' test-id='35'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:43 PM</td>
+										<td class='linked' test-id='42'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:44 PM</td>
+										<td class='linked' test-id='49'>GET satellite info with/without optional parameters units, timestamp</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@validateSatpositions</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						<span class='label fail'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 3</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 19, 2021 06:28:45 PM</td>
+										<td class='linked' test-id='56'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:45 PM</td>
+										<td class='linked' test-id='57'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:47 PM</td>
+										<td class='linked' test-id='63'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:48 PM</td>
+										<td class='linked' test-id='69'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:49 PM</td>
+										<td class='linked' test-id='75'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:51 PM</td>
+										<td class='linked' test-id='81'>validate satellite list with specified coordinates</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@validateTLE</span>
+						<span class='category-status right'>
+						<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 19, 2021 06:28:52 PM</td>
+										<td class='linked' test-id='87'>Validate whether TLE Data from satellite API returning in JSON/Text format</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:52 PM</td>
+										<td class='linked' test-id='88'>Validate whether TLE Data from satellite API returning in JSON/Text format</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:53 PM</td>
+										<td class='linked' test-id='95'>Validate whether TLE Data from satellite API returning in JSON/Text format</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:55 PM</td>
+										<td class='linked' test-id='102'>Validate whether TLE Data from satellite API returning in JSON/Text format</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@validatecoord</span>
+						<span class='category-status right'>
+						<span class='label pass'>7</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 7</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 19, 2021 06:28:56 PM</td>
+										<td class='linked' test-id='109'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:56 PM</td>
+										<td class='linked' test-id='110'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:57 PM</td>
+										<td class='linked' test-id='120'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:59 PM</td>
+										<td class='linked' test-id='130'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:29:01 PM</td>
+										<td class='linked' test-id='140'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:29:02 PM</td>
+										<td class='linked' test-id='150'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:29:04 PM</td>
+										<td class='linked' test-id='160'>Validate whether satellite API returning correct data with co-ordinates</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 19, 2021 06:28:43 PM</td>
+										<td class='linked' test-id='39'>Then I Receive Response code as 200</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(GlueCode_getSatList.java:77)
+	at ✽.I Receive Response code as 200(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:34)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:48 PM</td>
+										<td class='linked' test-id='67'>Then I Receive Response code as 200</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(GlueCode_getSatList.java:77)
+	at ✽.I Receive Response code as 200(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:50)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 19, 2021 06:28:52 PM</td>
+										<td class='linked' test-id='86'>And returned satellite list should be equal to number in "21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911" and units should be "kilometers" and 25544> is same</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected:<10> but was:<11>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(GlueCode_getSatList.java:276)
+	at ✽.returned satellite list should be equal to number in "21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911" and units should be "kilometers" and 25544> is same(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:51)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>23</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>141</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jul 19, 2021 06:28:32 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jul 19, 2021 06:29:06 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 34s+541ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@init</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Regression</td>
+							<td>22</td>
+							<td>5</td>
+							<td>0</td>
+							<td>
+									81.481%
+							</td>
+						</tr>
+						<tr>
+							<td>@getSatellitesList</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@negativeTest</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@validateSatInfo</td>
+							<td>4</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									66.667%
+							</td>
+						</tr>
+						<tr>
+							<td>@validateSatpositions</td>
+							<td>3</td>
+							<td>3</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+						<tr>
+							<td>@validateTLE</td>
+							<td>4</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@validatecoord</td>
+							<td>7</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 0,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				childCount: 23,
+				passChild: 20,
+				failChild: 3,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 3,
+				grandChildCount: 141,
+				passGrandChild: 135,
+				failGrandChild: 3,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 3,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 6,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone":34.058
+			};
+		</script>
+	
+		  <script src='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

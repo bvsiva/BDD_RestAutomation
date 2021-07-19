@@ -1,0 +1,2909 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-19T12:58:32.576Z",
+        "line": 3,
+        "name": "initialize output stream to store log to extract sysout messages to text file as log",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;initialize-output-stream-to-store-log-to-extract-sysout-messages-to-text-file-as-log",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 41000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "initialize output stream for log",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.initialize_output_stream_for_log()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@init"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:32.701Z",
+        "line": 7,
+        "name": "Validate whether satellites list is returned with id \u0026 name and it should return only one list which is currently available",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-satellites-list-is-returned-with-id-\u0026-name-and-it-should-return-only-one-list-which-is-currently-available",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 403000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "valid Resource URL for satellites API",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2664000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 154000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "returned satellite list should be 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 352000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "satellite id, name should not be null",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.satellite_id_name_should_not_be_null()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          },
+          {
+            "name": "@getSatellitesList"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:36.306Z",
+        "line": 16,
+        "name": "Validate whether get satellites API is returning 404 as error when endpoint is incorrect",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-get-satellites-api-is-returning-404-as-error-when-endpoint-is-incorrect",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "invalid Resource URL for satellites API",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.invalid_resource_url_for_satellites_api()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1356000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I Receive Response code as 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "error message should be \"Invalid controller specified (satellite)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid controller specified (satellite)\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.error_message_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@getSatellitesList"
+          },
+          {
+            "name": "@Regression"
+          },
+          {
+            "name": "@negativeTest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:37.682Z",
+        "line": 23,
+        "name": "Validate whether suppress_response_codes funcitonality is working or not for get satellites API",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-suppress-response-codes-funcitonality-is-working-or-not-for-get-satellites-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "invalid Resource URL for satellites API with \"suppress_response_codes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"suppress_response_codes\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.invalid_resource_url_for_satellites_api_with(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1309000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "error message should be \"Invalid controller specified (satellite)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid controller specified (satellite)\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.error_message_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@getSatellitesList"
+          },
+          {
+            "name": "@Regression"
+          },
+          {
+            "name": "@negativeTest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:39.015Z",
+        "line": 39,
+        "name": "GET satellite info with/without optional parameters units, timestamp",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;get-satellite-info-with/without-optional-parameters-units--timestamp;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "valid Resource URL for satellites API with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "units as \"miles\", timestamp as 234",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"miles\"",
+                  "offset": 9
+                },
+                {
+                  "val": "234",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.units_as_timestamp_as(java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1351000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "satellite id should not be 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "units should be \"miles\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"miles\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateSatInfo"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:40.406Z",
+        "line": 40,
+        "name": "GET satellite info with/without optional parameters units, timestamp",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;get-satellite-info-with/without-optional-parameters-units--timestamp;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "valid Resource URL for satellites API with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "units as \"null\", timestamp as 1245",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 9
+                },
+                {
+                  "val": "1245",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.units_as_timestamp_as(java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1319000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "satellite id should not be 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "units should be \"kilometers\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"kilometers\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateSatInfo"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:41.757Z",
+        "line": 41,
+        "name": "GET satellite info with/without optional parameters units, timestamp",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;get-satellite-info-with/without-optional-parameters-units--timestamp;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "valid Resource URL for satellites API with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "units as \"\", timestamp as null",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.units_as_timestamp_as_null(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1336000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c200\u003e but was \u003c400\u003e.\n\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)\n\tat stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(GlueCode_getSatList.java:77)\n\tat ✽.I Receive Response code as 200(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:34)\n",
+              "duration": 12000000,
+              "status": "failed"
+            },
+            "line": 34,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 35,
+            "name": "satellite id should not be 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 36,
+            "name": "units should be \"kilometers\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"kilometers\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateSatInfo"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:43.131Z",
+        "line": 42,
+        "name": "GET satellite info with/without optional parameters units, timestamp",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;get-satellite-info-with/without-optional-parameters-units--timestamp;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "valid Resource URL for satellites API with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "units as \"\", timestamp as 1245",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                },
+                {
+                  "val": "1245",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.units_as_timestamp_as(java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1339000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "satellite id should not be 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "units should be \"kilometers\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"kilometers\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateSatInfo"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:44.502Z",
+        "line": 43,
+        "name": "GET satellite info with/without optional parameters units, timestamp",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;get-satellite-info-with/without-optional-parameters-units--timestamp;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "valid Resource URL for satellites API with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "units as \"miles\", timestamp as 1245",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"miles\"",
+                  "offset": 9
+                },
+                {
+                  "val": "1245",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.units_as_timestamp_as(java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1314000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "satellite id should not be 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "units should be \"miles\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"miles\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateSatInfo"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:45.850Z",
+        "line": 54,
+        "name": "validate satellite list with specified coordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-satellite-list-with-specified-coordinates;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "valid Resource URL for satellites API with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "add positions to endpoint with units as \"miles\", timestamp as \"21436029892,1436029902\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"miles\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"21436029892,1436029902\"",
+                  "offset": 62
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1279000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 58000000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "returned satellite list should be equal to number in \"21436029892,1436029902\" and units should be \"miles\" and 25544\u003e is same",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"21436029892,1436029902\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"miles\"",
+                  "offset": 98
+                },
+                {
+                  "val": "25544",
+                  "offset": 110
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateSatpositions"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:47.192Z",
+        "line": 55,
+        "name": "validate satellite list with specified coordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-satellite-list-with-specified-coordinates;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "valid Resource URL for satellites API with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "add positions to endpoint with units as \"miles\", timestamp as \"none\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"miles\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"none\"",
+                  "offset": 62
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1323000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c200\u003e but was \u003c400\u003e.\n\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)\n\tat stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(GlueCode_getSatList.java:77)\n\tat ✽.I Receive Response code as 200(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:50)\n",
+              "duration": 1000000,
+              "status": "failed"
+            },
+            "line": 50,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 51,
+            "name": "returned satellite list should be equal to number in \"none\" and units should be \"miles\" and 25544\u003e is same",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"none\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"miles\"",
+                  "offset": 80
+                },
+                {
+                  "val": "25544",
+                  "offset": 92
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateSatpositions"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:48.527Z",
+        "line": 56,
+        "name": "validate satellite list with specified coordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-satellite-list-with-specified-coordinates;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "valid Resource URL for satellites API with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "add positions to endpoint with units as \"null\", timestamp as \"1436029902\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"1436029902\"",
+                  "offset": 61
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1273000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "returned satellite list should be equal to number in \"1436029902\" and units should be \"kilometers\" and 25544\u003e is same",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1436029902\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"kilometers\"",
+                  "offset": 86
+                },
+                {
+                  "val": "25544",
+                  "offset": 103
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateSatpositions"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:49.825Z",
+        "line": 57,
+        "name": "validate satellite list with specified coordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-satellite-list-with-specified-coordinates;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "valid Resource URL for satellites API with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "add positions to endpoint with units as \"null\", timestamp as \"21433429892,1436169902\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"21433429892,1436169902\"",
+                  "offset": 61
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1287000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 38000000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "returned satellite list should be equal to number in \"21433429892,1436169902\" and units should be \"kilometers\" and 25544\u003e is same",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"21433429892,1436169902\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"kilometers\"",
+                  "offset": 98
+                },
+                {
+                  "val": "25544",
+                  "offset": 115
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateSatpositions"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:51.156Z",
+        "line": 58,
+        "name": "validate satellite list with specified coordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-satellite-list-with-specified-coordinates;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "valid Resource URL for satellites API with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 43
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "add positions to endpoint with units as \"null\", timestamp as \"21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911\"",
+                  "offset": 61
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1335000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c10\u003e but was:\u003c11\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(GlueCode_getSatList.java:276)\n\tat ✽.returned satellite list should be equal to number in \"21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911\" and units should be \"kilometers\" and 25544\u003e is same(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:51)\n",
+              "duration": 4000000,
+              "status": "failed"
+            },
+            "line": 51,
+            "name": "returned satellite list should be equal to number in \"21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911\" and units should be \"kilometers\" and 25544\u003e is same",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"kilometers\"",
+                  "offset": 207
+                },
+                {
+                  "val": "25544",
+                  "offset": 224
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateSatpositions"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:52.504Z",
+        "line": 71,
+        "name": "Validate whether TLE Data from satellite API returning in JSON/Text format",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-tle-data-from-satellite-api-returning-in-json/text-format;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "valid Resource URL for satellites API to fetch tles with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 57
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_fetch_tles_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "given format query parm as \"json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"json\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.given_format_query_parm_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1291000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "Response format should be \"Content-Type\u003dapplication/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Content-Type\u003dapplication/json\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.response_format_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "verify X-Rate-Limit-Remaining is not 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 37
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.verify_x_rate_limit_remaining_is_not(java.lang.Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateTLE"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:53.803Z",
+        "line": 72,
+        "name": "Validate whether TLE Data from satellite API returning in JSON/Text format",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-tle-data-from-satellite-api-returning-in-json/text-format;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "valid Resource URL for satellites API to fetch tles with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 57
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_fetch_tles_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "given format query parm as \"text\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"text\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.given_format_query_parm_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1339000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "Response format should be \"Content-Type\u003dtext/plain\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Content-Type\u003dtext/plain\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.response_format_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "verify X-Rate-Limit-Remaining is not 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 37
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.verify_x_rate_limit_remaining_is_not(java.lang.Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateTLE"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:55.148Z",
+        "line": 73,
+        "name": "Validate whether TLE Data from satellite API returning in JSON/Text format",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-tle-data-from-satellite-api-returning-in-json/text-format;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "valid Resource URL for satellites API to fetch tles with 25544",
+            "match": {
+              "arguments": [
+                {
+                  "val": "25544",
+                  "offset": 57
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_fetch_tles_with(java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "given format query parm as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.given_format_query_parm_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1295000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "Response format should be \"Content-Type\u003dapplication/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Content-Type\u003dapplication/json\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.response_format_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "verify X-Rate-Limit-Remaining is not 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 37
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.verify_x_rate_limit_remaining_is_not(java.lang.Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validateTLE"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:56.472Z",
+        "line": 89,
+        "name": "Validate whether satellite API returning correct data with co-ordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-satellite-api-returning-correct-data-with-co-ordinates;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "valid Resource URL for satellites API to with 20.593683,78.962883",
+            "match": {
+              "arguments": [
+                {
+                  "val": "20.593683",
+                  "offset": 46
+                },
+                {
+                  "val": "78.962883",
+                  "offset": 56
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1341000000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "longitude should be \"78.962883\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"78.962883\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "latitude should be \"20.593683\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"20.593683\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "countrycode should be \"IN\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"IN\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "offset should be \"5.5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5.5\"",
+                  "offset": 17
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "timezone_id should be \"Asia/Kolkata\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Asia/Kolkata\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "error should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validatecoord"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:57.857Z",
+        "line": 90,
+        "name": "Validate whether satellite API returning correct data with co-ordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-satellite-api-returning-correct-data-with-co-ordinates;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "valid Resource URL for satellites API to with 51.507351,-0.127758",
+            "match": {
+              "arguments": [
+                {
+                  "val": "51.507351",
+                  "offset": 46
+                },
+                {
+                  "val": "-0.127758",
+                  "offset": 56
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1301000000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I Receive Response code as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "longitude should be \"-0.127758\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"-0.127758\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "latitude should be \"51.507351\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"51.507351\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "countrycode should be \"GB\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GB\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "offset should be \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 17
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "timezone_id should be \"Europe/London\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Europe/London\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "error should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validatecoord"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:58:59.198Z",
+        "line": 91,
+        "name": "Validate whether satellite API returning correct data with co-ordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-satellite-api-returning-correct-data-with-co-ordinates;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "valid Resource URL for satellites API to with 90.593683,78.962883",
+            "match": {
+              "arguments": [
+                {
+                  "val": "90.593683",
+                  "offset": 46
+                },
+                {
+                  "val": "78.962883",
+                  "offset": 56
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1778000000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I Receive Response code as 500",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "longitude should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "latitude should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "countrycode should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "offset should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 17
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "timezone_id should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "error should be \"application error\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application error\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validatecoord"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:59:01.012Z",
+        "line": 92,
+        "name": "Validate whether satellite API returning correct data with co-ordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-satellite-api-returning-correct-data-with-co-ordinates;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "valid Resource URL for satellites API to with -91.507351,-0.127758",
+            "match": {
+              "arguments": [
+                {
+                  "val": "-91.507351",
+                  "offset": 46
+                },
+                {
+                  "val": "-0.127758",
+                  "offset": 57
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1729000000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I Receive Response code as 500",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "longitude should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "latitude should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "countrycode should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "offset should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 17
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "timezone_id should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "error should be \"application error\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application error\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validatecoord"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:59:02.777Z",
+        "line": 93,
+        "name": "Validate whether satellite API returning correct data with co-ordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-satellite-api-returning-correct-data-with-co-ordinates;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "valid Resource URL for satellites API to with 20.593683,181.962883",
+            "match": {
+              "arguments": [
+                {
+                  "val": "20.593683",
+                  "offset": 46
+                },
+                {
+                  "val": "181.962883",
+                  "offset": 56
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1697000000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I Receive Response code as 500",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "longitude should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "latitude should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "countrycode should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "offset should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 17
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "timezone_id should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "error should be \"application error\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application error\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validatecoord"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T12:59:04.513Z",
+        "line": 94,
+        "name": "Validate whether satellite API returning correct data with co-ordinates",
+        "description": "",
+        "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone;validate-whether-satellite-api-returning-correct-data-with-co-ordinates;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "valid Resource URL for satellites API to with -21.507351,-180.127758",
+            "match": {
+              "arguments": [
+                {
+                  "val": "-21.507351",
+                  "offset": 46
+                },
+                {
+                  "val": "-180.127758",
+                  "offset": 57
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_to_with(java.lang.Double,java.lang.Double)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2155000000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "trigger a GET HTTP request",
+            "match": {
+              "location": "stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I Receive Response code as 500",
+            "match": {
+              "arguments": [
+                {
+                  "val": "500",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "longitude should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.longitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "latitude should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.latitude_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42000000,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "countrycode should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.countrycode_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "offset should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 17
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.offset_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "timezone_id should be \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.timezone_id_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "error should be \"application error\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application error\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.GlueCode_getSatList.error_should_be(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validatecoord"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone",
+    "description": "",
+    "id": "testsuite-to-test-wtia-rest-apis-to-verify-satellite-list--info-like-timestamp--units--coordinates--timezone",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/getSatellitesList.feature",
+    "tags": []
+  }
+]

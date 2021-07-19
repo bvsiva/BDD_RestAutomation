@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runnerClasses.RunnerTest" time="35.325" tests="23" errors="0" skipped="0" failures="3">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/svenkata/Documents/siva/TL/BDD_RestAutomation/target/test-classes:/Users/svenkata/Documents/siva/TL/BDD_RestAutomation/target/classes:/Users/svenkata/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/svenkata/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/svenkata/.m2/repository/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar:/Users/svenkata/.m2/repository/org/codehaus/groovy/groovy/3.0.2/groovy-3.0.2.jar:/Users/svenkata/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.2/groovy-xml-3.0.2.jar:/Users/svenkata/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/Users/svenkata/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/svenkata/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/svenkata/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/svenkata/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/Users/svenkata/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/svenkata/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/svenkata/.m2/repository/io/rest-assured/json-path/4.3.0/json-path-4.3.0.jar:/Users/svenkata/.m2/repository/org/codehaus/groovy/groovy-json/3.0.2/groovy-json-3.0.2.jar:/Users/svenkata/.m2/repository/io/rest-assured/rest-assured-common/4.3.0/rest-assured-common-4.3.0.jar:/Users/svenkata/.m2/repository/io/rest-assured/xml-path/4.3.0/xml-path-4.3.0.jar:/Users/svenkata/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/Users/svenkata/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/Users/svenkata/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.3.0.1/jaxb-osgi-2.3.0.1.jar:/Users/svenkata/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/Users/svenkata/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-java/6.9.1/cucumber-java-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-core/6.9.1/cucumber-core-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-gherkin/6.9.1/cucumber-gherkin-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.9.1/cucumber-gherkin-messages-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/messages/13.2.1/messages-13.2.1.jar:/Users/svenkata/.m2/repository/io/cucumber/tag-expressions/3.0.0/tag-expressions-3.0.0.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/svenkata/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-plugin/6.9.1/cucumber-plugin-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/docstring/6.9.1/docstring-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/html-formatter/9.0.0/html-formatter-9.0.0.jar:/Users/svenkata/.m2/repository/io/cucumber/create-meta/2.0.4/create-meta-2.0.4.jar:/Users/svenkata/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-junit/6.9.0/cucumber-junit-6.9.0.jar:/Users/svenkata/.m2/repository/net/masterthought/cucumber-reporting/5.3.1/cucumber-reporting-5.3.1.jar:/Users/svenkata/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.1/jackson-databind-2.10.1.jar:/Users/svenkata/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.1/jackson-annotations-2.10.1.jar:/Users/svenkata/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.1/jackson-core-2.10.1.jar:/Users/svenkata/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.1/jackson-datatype-jsr310-2.10.1.jar:/Users/svenkata/.m2/repository/org/apache/velocity/velocity-engine-core/2.1/velocity-engine-core-2.1.jar:/Users/svenkata/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/Users/svenkata/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/svenkata/.m2/repository/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/Users/svenkata/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/Users/svenkata/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/svenkata/.m2/repository/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.jar:/Users/svenkata/.m2/repository/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar:/Users/svenkata/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20191001.1/owasp-java-html-sanitizer-20191001.1.jar:/Users/svenkata/.m2/repository/com/google/guava/guava/27.1-jre/guava-27.1-jre.jar:/Users/svenkata/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/svenkata/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/svenkata/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/svenkata/.m2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar:/Users/svenkata/.m2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0.jar:/Users/svenkata/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/svenkata/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/Users/svenkata/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/svenkata/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/svenkata/.m2/repository/tech/grasshopper/extentreports-cucumber6-adapter/1.1.0/extentreports-cucumber6-adapter-1.1.0.jar:/Users/svenkata/.m2/repository/com/aventstack/extentreports/4.1.7/extentreports-4.1.7.jar:/Users/svenkata/.m2/repository/org/freemarker/freemarker/2.3.29/freemarker-2.3.29.jar:/Users/svenkata/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/svenkata/.m2/repository/org/mongodb/bson/3.12.0/bson-3.12.0.jar:/Users/svenkata/.m2/repository/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar:/Users/svenkata/.m2/repository/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar:/Users/svenkata/.m2/repository/org/json/json/20150729/json-20150729.jar:/Users/svenkata/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib"/>
+    <property name="sun.java.command" value="/Users/svenkata/Documents/siva/TL/BDD_RestAutomation/target/surefire/surefirebooter1810438055742412581.jar /Users/svenkata/Documents/siva/TL/BDD_RestAutomation/target/surefire 2021-07-19T18-28-31_416-jvmRun1 surefire3869518577671578781tmp surefire_05503617248598283249tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="surefire.test.class.path" value="/Users/svenkata/Documents/siva/TL/BDD_RestAutomation/target/test-classes:/Users/svenkata/Documents/siva/TL/BDD_RestAutomation/target/classes:/Users/svenkata/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/svenkata/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/svenkata/.m2/repository/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar:/Users/svenkata/.m2/repository/org/codehaus/groovy/groovy/3.0.2/groovy-3.0.2.jar:/Users/svenkata/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.2/groovy-xml-3.0.2.jar:/Users/svenkata/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/Users/svenkata/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/svenkata/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/svenkata/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/svenkata/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/Users/svenkata/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/svenkata/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/svenkata/.m2/repository/io/rest-assured/json-path/4.3.0/json-path-4.3.0.jar:/Users/svenkata/.m2/repository/org/codehaus/groovy/groovy-json/3.0.2/groovy-json-3.0.2.jar:/Users/svenkata/.m2/repository/io/rest-assured/rest-assured-common/4.3.0/rest-assured-common-4.3.0.jar:/Users/svenkata/.m2/repository/io/rest-assured/xml-path/4.3.0/xml-path-4.3.0.jar:/Users/svenkata/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/Users/svenkata/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/Users/svenkata/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.3.0.1/jaxb-osgi-2.3.0.1.jar:/Users/svenkata/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/Users/svenkata/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-java/6.9.1/cucumber-java-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-core/6.9.1/cucumber-core-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-gherkin/6.9.1/cucumber-gherkin-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-gherkin-messages/6.9.1/cucumber-gherkin-messages-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/messages/13.2.1/messages-13.2.1.jar:/Users/svenkata/.m2/repository/io/cucumber/tag-expressions/3.0.0/tag-expressions-3.0.0.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-expressions/10.3.0/cucumber-expressions-10.3.0.jar:/Users/svenkata/.m2/repository/io/cucumber/datatable/3.5.0/datatable-3.5.0.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-plugin/6.9.1/cucumber-plugin-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/docstring/6.9.1/docstring-6.9.1.jar:/Users/svenkata/.m2/repository/io/cucumber/html-formatter/9.0.0/html-formatter-9.0.0.jar:/Users/svenkata/.m2/repository/io/cucumber/create-meta/2.0.4/create-meta-2.0.4.jar:/Users/svenkata/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/svenkata/.m2/repository/io/cucumber/cucumber-junit/6.9.0/cucumber-junit-6.9.0.jar:/Users/svenkata/.m2/repository/net/masterthought/cucumber-reporting/5.3.1/cucumber-reporting-5.3.1.jar:/Users/svenkata/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.1/jackson-databind-2.10.1.jar:/Users/svenkata/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.1/jackson-annotations-2.10.1.jar:/Users/svenkata/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.1/jackson-core-2.10.1.jar:/Users/svenkata/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.1/jackson-datatype-jsr310-2.10.1.jar:/Users/svenkata/.m2/repository/org/apache/velocity/velocity-engine-core/2.1/velocity-engine-core-2.1.jar:/Users/svenkata/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/Users/svenkata/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/svenkata/.m2/repository/joda-time/joda-time/2.10.5/joda-time-2.10.5.jar:/Users/svenkata/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/Users/svenkata/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/svenkata/.m2/repository/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.jar:/Users/svenkata/.m2/repository/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar:/Users/svenkata/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20191001.1/owasp-java-html-sanitizer-20191001.1.jar:/Users/svenkata/.m2/repository/com/google/guava/guava/27.1-jre/guava-27.1-jre.jar:/Users/svenkata/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/svenkata/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/svenkata/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/svenkata/.m2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar:/Users/svenkata/.m2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0.jar:/Users/svenkata/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/svenkata/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/Users/svenkata/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/Users/svenkata/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/svenkata/.m2/repository/tech/grasshopper/extentreports-cucumber6-adapter/1.1.0/extentreports-cucumber6-adapter-1.1.0.jar:/Users/svenkata/.m2/repository/com/aventstack/extentreports/4.1.7/extentreports-4.1.7.jar:/Users/svenkata/.m2/repository/org/freemarker/freemarker/2.3.29/freemarker-2.3.29.jar:/Users/svenkata/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/svenkata/.m2/repository/org/mongodb/bson/3.12.0/bson-3.12.0.jar:/Users/svenkata/.m2/repository/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar:/Users/svenkata/.m2/repository/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar:/Users/svenkata/.m2/repository/org/json/json/20150729/json-20150729.jar:/Users/svenkata/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/svenkata"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre"/>
+    <property name="basedir" value="/Users/svenkata/Documents/siva/TL/BDD_RestAutomation"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/svenkata/Documents/siva/TL/BDD_RestAutomation/target/surefire/surefirebooter1810438055742412581.jar"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="1.8.0_291-b10"/>
+    <property name="user.name" value="svenkata"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.16"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/svenkata/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/rt/tmwkgvf53mj1qkgn0pymwwl40000gp/T/"/>
+    <property name="cucumber.filter.tags" value="@Regression"/>
+    <property name="java.version" value="1.8.0_291"/>
+    <property name="user.dir" value="/Users/svenkata/Documents/siva/TL/BDD_RestAutomation"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/svenkata/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.291-b10"/>
+    <property name="java.ext.dirs" value="/Users/svenkata/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="initialize output stream to store log to extract sysout messages to text file as log" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="0.202"/>
+  <testcase name="Validate whether satellites list is returned with id &amp; name and it should return only one list which is currently available" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="3.611"/>
+  <testcase name="Validate whether get satellites API is returning 404 as error when endpoint is incorrect" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.375"/>
+  <testcase name="Validate whether suppress_response_codes funcitonality is working or not for get satellites API" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.333"/>
+  <testcase name="GET satellite info with/without optional parameters units, timestamp #1" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.392"/>
+  <testcase name="GET satellite info with/without optional parameters units, timestamp #2" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.352"/>
+  <testcase name="GET satellite info with/without optional parameters units, timestamp #3" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.445">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;400&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+]]></failure>
+    <system-out><![CDATA[
+@validateSatInfo @Regression
+Scenario Outline: GET satellite info with/without optional parameters units, timestamp &amp#27;[90m# src/test/resources/Features/getSatellitesList.feature:41&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mvalid Resource URL for satellites API with &amp#27;[0m&amp#27;[32m&amp#27;[1m25544&amp#27;[0m                               &amp#27;[90m# stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32munits as &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, timestamp as null&amp#27;[0m                                                   &amp#27;[90m# stepDefinitions.GlueCode_getSatList.units_as_timestamp_as_null(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mtrigger a GET HTTP request&amp#27;[0m                                                      &amp#27;[90m# stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mI Receive Response code as &amp#27;[0m&amp#27;[31m&amp#27;[1m200&amp#27;[0m                                                  &amp#27;[90m# stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(GlueCode_getSatList.java:77)
+	at ?.I Receive Response code as 200(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:34)
+&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36msatellite id should not be &amp#27;[0m&amp#27;[36m&amp#27;[1m25544&amp#27;[0m                                                 &amp#27;[90m# stepDefinitions.GlueCode_getSatList.satellite_id_should_not_be(java.lang.Integer)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36munits should be &amp#27;[0m&amp#27;[36m&amp#27;[1m"kilometers"&amp#27;[0m                                                     &amp#27;[90m# stepDefinitions.GlueCode_getSatList.units_should_be(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="GET satellite info with/without optional parameters units, timestamp #4" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.3"/>
+  <testcase name="GET satellite info with/without optional parameters units, timestamp #5" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.348"/>
+  <testcase name="validate satellite list with specified coordinates #1" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.343"/>
+  <testcase name="validate satellite list with specified coordinates #2" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.369">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;400&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+]]></failure>
+    <system-out><![CDATA[
+@validateSatpositions @Regression
+Scenario Outline: validate satellite list with specified coordinates                                             &amp#27;[90m# src/test/resources/Features/getSatellitesList.feature:55&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mvalid Resource URL for satellites API with &amp#27;[0m&amp#27;[32m&amp#27;[1m25544&amp#27;[0m                                                         &amp#27;[90m# stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32madd positions to endpoint with units as &amp#27;[0m&amp#27;[32m&amp#27;[1m"miles"&amp#27;[0m&amp#27;[32m, timestamp as &amp#27;[0m&amp#27;[32m&amp#27;[1m"none"&amp#27;[0m                                       &amp#27;[90m# stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mtrigger a GET HTTP request&amp#27;[0m                                                                                &amp#27;[90m# stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mI Receive Response code as &amp#27;[0m&amp#27;[31m&amp#27;[1m200&amp#27;[0m                                                                            &amp#27;[90m# stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(GlueCode_getSatList.java:77)
+	at ?.I Receive Response code as 200(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:50)
+&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mreturned satellite list should be equal to number in &amp#27;[0m&amp#27;[36m&amp#27;[1m"none"&amp#27;[0m&amp#27;[36m and units should be &amp#27;[0m&amp#27;[36m&amp#27;[1m"miles"&amp#27;[0m&amp#27;[36m and &amp#27;[0m&amp#27;[36m&amp#27;[1m25544&amp#27;[0m&amp#27;[36m> is same&amp#27;[0m &amp#27;[90m# stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="validate satellite list with specified coordinates #3" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.264"/>
+  <testcase name="validate satellite list with specified coordinates #4" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.331"/>
+  <testcase name="validate satellite list with specified coordinates #5" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.36">
+    <failure message="expected:&lt;10&gt; but was:&lt;11&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<10> but was:<11>
+]]></failure>
+    <system-out><![CDATA[
+@validateSatpositions @Regression
+Scenario Outline: validate satellite list with specified coordinates                                                                                                                                                                                 &amp#27;[90m# src/test/resources/Features/getSatellitesList.feature:58&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mvalid Resource URL for satellites API with &amp#27;[0m&amp#27;[32m&amp#27;[1m25544&amp#27;[0m                                                                                                                                                                                             &amp#27;[90m# stepDefinitions.GlueCode_getSatList.valid_resource_url_for_satellites_api_with(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32madd positions to endpoint with units as &amp#27;[0m&amp#27;[32m&amp#27;[1m"null"&amp#27;[0m&amp#27;[32m, timestamp as &amp#27;[0m&amp#27;[32m&amp#27;[1m"21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911"&amp#27;[0m                                             &amp#27;[90m# stepDefinitions.GlueCode_getSatList.add_positions_to_endpoint_with_units_as_timestamp_as(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mtrigger a GET HTTP request&amp#27;[0m                                                                                                                                                                                                                    &amp#27;[90m# stepDefinitions.GlueCode_getSatList.trigger_a_GET_HTTP_request()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI Receive Response code as &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                                                                                                                                                                                                &amp#27;[90m# stepDefinitions.GlueCode_getSatList.i_Receive_Response_code(java.lang.Integer)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mreturned satellite list should be equal to number in &amp#27;[0m&amp#27;[31m&amp#27;[1m"21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911"&amp#27;[0m&amp#27;[31m and units should be &amp#27;[0m&amp#27;[31m&amp#27;[1m"kilometers"&amp#27;[0m&amp#27;[31m and &amp#27;[0m&amp#27;[31m&amp#27;[1m25544&amp#27;[0m&amp#27;[31m> is same&amp#27;[0m &amp#27;[90m# stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(java.lang.String,java.lang.String,java.lang.Integer)&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected:<10> but was:<11>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at stepDefinitions.GlueCode_getSatList.returned_satellite_list_should_be_equal_to_number_in_and_units_should_be_and_is_same(GlueCode_getSatList.java:276)
+	at ?.returned satellite list should be equal to number in "21433429891,21433429892,21433429893,21433429894,21433429895,21433429896,21433429897,21433429898,21433429899,21433429110,21433429911" and units should be "kilometers" and 25544> is same(file:///Users/svenkata/Documents/siva/TL/BDD_RestAutomation/src/test/resources/Features/getSatellitesList.feature:51)
+&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Validate whether TLE Data from satellite API returning in JSON/Text format #1" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.288"/>
+  <testcase name="Validate whether TLE Data from satellite API returning in JSON/Text format #2" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.347"/>
+  <testcase name="Validate whether TLE Data from satellite API returning in JSON/Text format #3" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.303"/>
+  <testcase name="Validate whether satellite API returning correct data with co-ordinates #1" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.401"/>
+  <testcase name="Validate whether satellite API returning correct data with co-ordinates #2" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.341"/>
+  <testcase name="Validate whether satellite API returning correct data with co-ordinates #3" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.815"/>
+  <testcase name="Validate whether satellite API returning correct data with co-ordinates #4" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.765"/>
+  <testcase name="Validate whether satellite API returning correct data with co-ordinates #5" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="1.736"/>
+  <testcase name="Validate whether satellite API returning correct data with co-ordinates #6" classname="TestSuite to test WTIA REST APIs to verify satellite list, info like timestamp, units, coordinates, timezone" time="2.229"/>
+</testsuite>
