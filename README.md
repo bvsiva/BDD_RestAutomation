@@ -18,7 +18,6 @@ Steps to start :
 3.	Execute the following Maven command's
         mvn clean :- To clean the maven repo
         mvn install :- To install the maven requirments
-        mvn test :- To execute the test scenarios
         mvn test -Dcucumber.filter.tags={"@init","@Regression"} :- To execute test scenarios based on tags
 
 
